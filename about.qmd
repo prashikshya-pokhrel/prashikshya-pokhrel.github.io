@@ -1,9 +1,9 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-This is my website! I am a Junior and a Data Science major at Mount Holyoke College
+Hi! My name is Prashikshya Pokhrel, I am a Junior and a Data Science major at Mount Holyoke College. I am interested in statistics and causal inference. And this is my website!
 
-```{r}
-1 + 1
-```
+![](my_photo.jpg)
+To contact me, please reach out via [LinkedIn](https://www.linkedin.com/in/pokhrelprashikshya/)
+
