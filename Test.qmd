@@ -1,3 +1,45 @@
 ---
 title: "Test"
 ---
+
+# Introduction
+
+The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf & Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985.My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames. I am interested in seeing if the oil producing status of a country will affect the per capita gdp growth of that country. For this I am interested in oil variable which has two category "yes" and "no" (categorical variable), gdpgrowth (numerical variable), school (numerical variable) and invest (numerical variable) to also see if school or investment can also confound the gdp growth of a country even if the country produces an oil? Each row in my data set corresponds to a single “country‐year” observation—that is, one country in one specific year.The GrowthDJ dataset covers 121 countries for which Penn World Table 4.0 and World Bank (World Development Report) data were available, averaged over 1960–1985. Sampling method has not been explicitly stated in the data set.
+
+### 1. Load your data set using the code chunk below.
+
+```{r}
+df = read.csv("GrowthDJ.csv")
+head(df)
+nrow(df)
+ncol(df)
+
+# df after cleaning
+df_clean <- na.omit(df)
+head(df_clean)
+nrow(df_clean)
+ncol(df_clean)
+```
+
+### 2. Visualizations
+
+```{r}
+library(ggplot2)
+ggplot(df_clean, aes(x = gdpgrowth)) + geom_histogram(binwidth = 1, fill = "white", color = "black") + labs(title = "Histogram of Per-Capita GDP Growth", x = "GDP Growth", y = "Count")
+```
+
+```{r}
+ggplot(df_clean, aes(x = oil)) +geom_bar(color="black", fill="pink") +labs(title = "Count of Oil-Producing Status",x= "Oil-Producing Status", y= "Count") + theme_minimal()
+
+```
+
+```{r}
+ggplot(df_clean, aes(x = invest, y = gdpgrowth, color = oil)) + geom_point(alpha = 0.7) + labs(title = "GDP Growth vs. Investment Ratio, by Oil Status",x= " Average ratio of Investment in percentage",y = "Per-Capita GDP Growth",color = "Oil Producer")
+
+```
+
+```{r}
+ggplot(df_clean, aes(x = gdpgrowth, color = oil)) +geom_density(linewidth = 1) +labs(title = "Density of GDP Growth by Oil Status",x = "Per-Capita GDP Growth",y = "Density")
+
+
+```
