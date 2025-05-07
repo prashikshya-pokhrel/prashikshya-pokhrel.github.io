@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prashikshya">
+
+<title>Final Project: Checkpoint 2 – Prashikshya Pokhrel’s Website</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+</head><body class="nav-fixed">\usepackage{booktabs}
+
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Prashikshya Pokhrel’s Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Test.html"> 
+<span class="menu-text">Test</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#review-the" id="toc-review-the" class="nav-link active" data-scroll-target="#review-the">1. Review the </a></li>
+  <li><a href="#describe-your-data-set-in-1---2-sentences." id="toc-describe-your-data-set-in-1---2-sentences." class="nav-link" data-scroll-target="#describe-your-data-set-in-1---2-sentences.">2. Describe your data set in 1 - 2 sentences.</a></li>
+  <li><a href="#what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." id="toc-what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." class="nav-link" data-scroll-target="#what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here.">3. What is the source of your data set? Include a link to where you got it here.</a></li>
+  <li><a href="#load-your-data-set-using-the-code-chunk-below." id="toc-load-your-data-set-using-the-code-chunk-below." class="nav-link" data-scroll-target="#load-your-data-set-using-the-code-chunk-below.">4. Load your data set using the code chunk below.</a></li>
+  <li><a href="#how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." id="toc-how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." class="nav-link" data-scroll-target="#how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows.">5. How many rows does your data set have? There should be at least 30 rows.</a></li>
+  <li><a href="#how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." id="toc-how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." class="nav-link" data-scroll-target="#how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units.">6. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent <strong>and</strong> their units.</a></li>
+  <li><a href="#how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." id="toc-how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." class="nav-link" data-scroll-target="#how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories.">7. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.</a></li>
+  <li><a href="#checkpoint-2" id="toc-checkpoint-2" class="nav-link" data-scroll-target="#checkpoint-2">Checkpoint 2</a>
+  <ul class="collapse">
+  <li><a href="#what-variables-in-your-data-set-are-you-interested-in-are-they-quantitative-or-categorical-if-quantitative-provide-the-units.-if-categorical-list-or-describe-the-categories." id="toc-what-variables-in-your-data-set-are-you-interested-in-are-they-quantitative-or-categorical-if-quantitative-provide-the-units.-if-categorical-list-or-describe-the-categories." class="nav-link" data-scroll-target="#what-variables-in-your-data-set-are-you-interested-in-are-they-quantitative-or-categorical-if-quantitative-provide-the-units.-if-categorical-list-or-describe-the-categories.">1. What variables in your data set are you interested in? Are they quantitative or categorical? If quantitative, provide the units. If categorical, list or describe the categories.</a></li>
+  <li><a href="#what-does-one-observational-unit-row-represent-in-your-data-set" id="toc-what-does-one-observational-unit-row-represent-in-your-data-set" class="nav-link" data-scroll-target="#what-does-one-observational-unit-row-represent-in-your-data-set">2. What does one observational unit (row) represent in your data set?</a></li>
+  <li><a href="#how-was-the-sample-obtained-if-you-can-find-what-the-sampling-method-was-include-that-information.-also-include-what-year-the-data-was-collected" id="toc-how-was-the-sample-obtained-if-you-can-find-what-the-sampling-method-was-include-that-information.-also-include-what-year-the-data-was-collected" class="nav-link" data-scroll-target="#how-was-the-sample-obtained-if-you-can-find-what-the-sampling-method-was-include-that-information.-also-include-what-year-the-data-was-collected">3. How was the sample obtained? If you can find what the sampling method was, include that information. Also include what year the data was collected</a></li>
+  <li><a href="#a.-if-any-of-this-information-isnt-available-state-that." id="toc-a.-if-any-of-this-information-isnt-available-state-that." class="nav-link" data-scroll-target="#a.-if-any-of-this-information-isnt-available-state-that.">a. If any of this information isn’t available, state that.</a></li>
+  <li><a href="#b.-how-did-you-access-the-data-include-a-hyperlink-and-the-date-time-you-most-recently-accessed-the-data." id="toc-b.-how-did-you-access-the-data-include-a-hyperlink-and-the-date-time-you-most-recently-accessed-the-data." class="nav-link" data-scroll-target="#b.-how-did-you-access-the-data-include-a-hyperlink-and-the-date-time-you-most-recently-accessed-the-data.">b. How did you access the data? (Include a hyperlink, and the date + time you most recently accessed the data.)</a></li>
+  <li><a href="#do-your-quantitative-variables-have-the-correct-types-e.g.-double-for-decimals-integer-for-whole-numbers-etc..-if-not-set-them-to-be-the-correct-type.-you-can-check-the-type-of-a-variable-using-the-class-function." id="toc-do-your-quantitative-variables-have-the-correct-types-e.g.-double-for-decimals-integer-for-whole-numbers-etc..-if-not-set-them-to-be-the-correct-type.-you-can-check-the-type-of-a-variable-using-the-class-function." class="nav-link" data-scroll-target="#do-your-quantitative-variables-have-the-correct-types-e.g.-double-for-decimals-integer-for-whole-numbers-etc..-if-not-set-them-to-be-the-correct-type.-you-can-check-the-type-of-a-variable-using-the-class-function.">4. Do your quantitative variables have the correct types (e.g., double for decimals, integer for whole numbers, etc.). If not, set them to be the correct type. You can check the type of a variable using the class() function.</a></li>
+  <li><a href="#do-your-categorical-variables-have-the-type-factor-if-not-give-them-this-type-to-tell-r-that-they-are-categorical." id="toc-do-your-categorical-variables-have-the-type-factor-if-not-give-them-this-type-to-tell-r-that-they-are-categorical." class="nav-link" data-scroll-target="#do-your-categorical-variables-have-the-type-factor-if-not-give-them-this-type-to-tell-r-that-they-are-categorical.">5. Do your categorical variables have the type factor? If not, give them this type to tell R that they are categorical.</a></li>
+  <li><a href="#are-there-any-missing-values-for-your-variables-listed-in-9-if-so-filter-them-out.-note-some-data-sets-use-empty-strings-to-denote-missing-values-so-check-for-these-as-well." id="toc-are-there-any-missing-values-for-your-variables-listed-in-9-if-so-filter-them-out.-note-some-data-sets-use-empty-strings-to-denote-missing-values-so-check-for-these-as-well." class="nav-link" data-scroll-target="#are-there-any-missing-values-for-your-variables-listed-in-9-if-so-filter-them-out.-note-some-data-sets-use-empty-strings-to-denote-missing-values-so-check-for-these-as-well.">6. Are there any missing values for your variables listed in (9)? If so, filter them out. Note: Some data sets use empty strings “” to denote missing values, so check for these as well.</a></li>
+  <li><a href="#how-many-observational-units-rows-do-you-have-after-the-previous-step" id="toc-how-many-observational-units-rows-do-you-have-after-the-previous-step" class="nav-link" data-scroll-target="#how-many-observational-units-rows-do-you-have-after-the-previous-step">7. How many observational units (rows) do you have after the previous step?</a></li>
+  <li><a href="#does-the-source-of-data-say-that-certain-data-points-are-missing-for-example-in-nhanes-we-are-told-that-the-variable-height-is-measured-only-for-participants-aged-2-years-or-older-meaning-height-will-have-na-values-in-rows-corresponding-to-participants-under-2.-if-not-available-in-the-data-description-why-do-you-think-some-data-points-are-missing-is-the-mechanism-for-missingness-completely-random-or-could-there-be-something-systematic-which-leads-to-greater-rates-of-missingness-its-okay-if-youre-not-sure-how-to-answer-this-question-just-do-your-best-to-think-about-it." id="toc-does-the-source-of-data-say-that-certain-data-points-are-missing-for-example-in-nhanes-we-are-told-that-the-variable-height-is-measured-only-for-participants-aged-2-years-or-older-meaning-height-will-have-na-values-in-rows-corresponding-to-participants-under-2.-if-not-available-in-the-data-description-why-do-you-think-some-data-points-are-missing-is-the-mechanism-for-missingness-completely-random-or-could-there-be-something-systematic-which-leads-to-greater-rates-of-missingness-its-okay-if-youre-not-sure-how-to-answer-this-question-just-do-your-best-to-think-about-it." class="nav-link" data-scroll-target="#does-the-source-of-data-say-that-certain-data-points-are-missing-for-example-in-nhanes-we-are-told-that-the-variable-height-is-measured-only-for-participants-aged-2-years-or-older-meaning-height-will-have-na-values-in-rows-corresponding-to-participants-under-2.-if-not-available-in-the-data-description-why-do-you-think-some-data-points-are-missing-is-the-mechanism-for-missingness-completely-random-or-could-there-be-something-systematic-which-leads-to-greater-rates-of-missingness-its-okay-if-youre-not-sure-how-to-answer-this-question-just-do-your-best-to-think-about-it.">8. Does the source of data say that certain data points are missing? (For example, in NHANES we are told that the variable Height is measured only for participants aged 2 years or older, meaning Height will have NA values in rows corresponding to participants under 2.) If not available in the data description, why do you think some data points are missing? Is the mechanism for missingness completely random, or could there be something systematic which leads to greater rates of missingness? It’s okay if you’re not sure how to answer this question — just do your best to think about it.</a></li>
+  <li><a href="#provide-any-numerical-summaries-that-are-relevant-to-your-research-question.-these-are-highly-dependent-on-your-question-but-some-ideas-are" id="toc-provide-any-numerical-summaries-that-are-relevant-to-your-research-question.-these-are-highly-dependent-on-your-question-but-some-ideas-are" class="nav-link" data-scroll-target="#provide-any-numerical-summaries-that-are-relevant-to-your-research-question.-these-are-highly-dependent-on-your-question-but-some-ideas-are">9. Provide any numerical summaries that are relevant to your research question. These are highly dependent on your question, but some ideas are:</a></li>
+  <li><a href="#for-one-quantitative-variable-some-relevant-numerical-summaries-involve" id="toc-for-one-quantitative-variable-some-relevant-numerical-summaries-involve" class="nav-link" data-scroll-target="#for-one-quantitative-variable-some-relevant-numerical-summaries-involve">For one quantitative variable, some relevant numerical summaries involve:</a></li>
+  <li><a href="#a.-one-measure-of-center-e.g.-mean-median" id="toc-a.-one-measure-of-center-e.g.-mean-median" class="nav-link" data-scroll-target="#a.-one-measure-of-center-e.g.-mean-median">a. One measure of center (e.g., mean, median);</a></li>
+  <li><a href="#b.-one-measure-of-spread-e.g.-standard-deviation-variance-iqr-a-minimummaximum" id="toc-b.-one-measure-of-spread-e.g.-standard-deviation-variance-iqr-a-minimummaximum" class="nav-link" data-scroll-target="#b.-one-measure-of-spread-e.g.-standard-deviation-variance-iqr-a-minimummaximum">b. One measure of spread (e.g., standard deviation, variance, IQR, a minimum/maximum);</a></li>
+  <li><a href="#c.-an-overall-count-how-many-observations-do-you-have" id="toc-c.-an-overall-count-how-many-observations-do-you-have" class="nav-link" data-scroll-target="#c.-an-overall-count-how-many-observations-do-you-have">c.&nbsp;An overall count (how many observations do you have?)</a></li>
+  <li><a href="#for-one-categorical-variable-a-relevant-numerical-summary-might-be" id="toc-for-one-categorical-variable-a-relevant-numerical-summary-might-be" class="nav-link" data-scroll-target="#for-one-categorical-variable-a-relevant-numerical-summary-might-be">For one categorical variable, a relevant numerical summary might be:</a></li>
+  <li><a href="#a.-the-of-observations-in-each-category-i.e.-use-count" id="toc-a.-the-of-observations-in-each-category-i.e.-use-count" class="nav-link" data-scroll-target="#a.-the-of-observations-in-each-category-i.e.-use-count">a. the # of observations in each category (i.e., use count());</a></li>
+  <li><a href="#b.-the-proportion-or-percentage-of-observations-in-each-category." id="toc-b.-the-proportion-or-percentage-of-observations-in-each-category." class="nav-link" data-scroll-target="#b.-the-proportion-or-percentage-of-observations-in-each-category.">b. the proportion (or percentage) of observations in each category.</a>
+  <ul class="collapse">
+  <li><a href="#provide-any-visualizations-that-are-relevant-to-your-research-question.-chapter-2-in-this-online-text-is-a-good-resource-for-creating-different-plots." id="toc-provide-any-visualizations-that-are-relevant-to-your-research-question.-chapter-2-in-this-online-text-is-a-good-resource-for-creating-different-plots." class="nav-link" data-scroll-target="#provide-any-visualizations-that-are-relevant-to-your-research-question.-chapter-2-in-this-online-text-is-a-good-resource-for-creating-different-plots.">10. Provide any visualizations that are relevant to your research question. Chapter 2 in this online text is a good resource for creating different plots.</a></li>
+  </ul></li>
+  <li><a href="#the-choice-of-visualization-can-be-highly-dependent-on-your-question-but-some-ideas-are" id="toc-the-choice-of-visualization-can-be-highly-dependent-on-your-question-but-some-ideas-are" class="nav-link" data-scroll-target="#the-choice-of-visualization-can-be-highly-dependent-on-your-question-but-some-ideas-are">The choice of visualization can be highly dependent on your question, but some ideas are:</a></li>
+  <li><a href="#a.-a-visual-summary-of-your-quantitative-outcome-of-interest" id="toc-a.-a-visual-summary-of-your-quantitative-outcome-of-interest" class="nav-link" data-scroll-target="#a.-a-visual-summary-of-your-quantitative-outcome-of-interest">a. A visual summary of your (quantitative) outcome of interest:</a></li>
+  <li><a href="#i.-examples-a-density-plot-a-box-plot-a-histogram-a-relative-frequency-histogram-etc." id="toc-i.-examples-a-density-plot-a-box-plot-a-histogram-a-relative-frequency-histogram-etc." class="nav-link" data-scroll-target="#i.-examples-a-density-plot-a-box-plot-a-histogram-a-relative-frequency-histogram-etc.">i. Examples: a density plot, a box plot, a histogram, a relative frequency histogram, etc.</a></li>
+  <li><a href="#b.-a-visual-summary-of-your-predictors-of-interest" id="toc-b.-a-visual-summary-of-your-predictors-of-interest" class="nav-link" data-scroll-target="#b.-a-visual-summary-of-your-predictors-of-interest">b. A visual summary of your predictor(s) of interest:</a></li>
+  <li><a href="#i.-for-one-categorical-predictor-you-could-do-a-bar-chart-mosaic-plot-etc." id="toc-i.-for-one-categorical-predictor-you-could-do-a-bar-chart-mosaic-plot-etc." class="nav-link" data-scroll-target="#i.-for-one-categorical-predictor-you-could-do-a-bar-chart-mosaic-plot-etc.">i. For one categorical predictor, you could do a bar chart, mosaic plot, etc.</a></li>
+  <li><a href="#c.-a-visual-summary-of-the-relationship-between-one-quantitative-variable-and-one-or-more-different-variables" id="toc-c.-a-visual-summary-of-the-relationship-between-one-quantitative-variable-and-one-or-more-different-variables" class="nav-link" data-scroll-target="#c.-a-visual-summary-of-the-relationship-between-one-quantitative-variable-and-one-or-more-different-variables">c.&nbsp;A visual summary of the relationship between one quantitative variable and one or more different variables:</a></li>
+  <li><a href="#i.-ideas-scatter-plots-maybe-with-points-colored-by-a-category-of-some-categorical-variable-side-by-side-histograms-side-by-side-box-plots-side-by-side-histograms-overlaid-density-plots-etc." id="toc-i.-ideas-scatter-plots-maybe-with-points-colored-by-a-category-of-some-categorical-variable-side-by-side-histograms-side-by-side-box-plots-side-by-side-histograms-overlaid-density-plots-etc." class="nav-link" data-scroll-target="#i.-ideas-scatter-plots-maybe-with-points-colored-by-a-category-of-some-categorical-variable-side-by-side-histograms-side-by-side-box-plots-side-by-side-histograms-overlaid-density-plots-etc.">i. Ideas: scatter plots (maybe with points colored by a category of some categorical variable), side-by-side histograms, side-by-side box plots, side-by-side histograms, overlaid density plots, etc.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Project: Checkpoint 2</h1>
+<p class="subtitle lead">STAT 244</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prashikshya </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="review-the" class="level3">
+<h3 class="anchored" data-anchor-id="review-the">1. Review the </h3>
+</section>
+<section id="describe-your-data-set-in-1---2-sentences." class="level3">
+<h3 class="anchored" data-anchor-id="describe-your-data-set-in-1---2-sentences.">2. Describe your data set in 1 - 2 sentences.</h3>
+<p>Answer: The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf &amp; Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985.</p>
+</section>
+<section id="what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here.">3. What is the source of your data set? Include a link to where you got it here.</h3>
+<p><strong>Note.</strong> If you would like to collect survey data from classmates or peers via a Google form, please let me know right away so we can set this up for you. In the meantime, create the Google Form and decide what information you want to collect.</p>
+<p>The following questions allow us to determine if your proposed data set meets the project criterion:</p>
+<p>Link: https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html</p>
+</section>
+<section id="load-your-data-set-using-the-code-chunk-below." class="level3">
+<h3 class="anchored" data-anchor-id="load-your-data-set-using-the-code-chunk-below.">4. Load your data set using the code chunk below.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"GrowthDJ.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  rownames oil inter oecd gdp60 gdp85 gdpgrowth popgrowth invest school
+1        1  no   yes   no  2485  4371       4.8       2.6   24.1    4.5
+2        2  no    no   no  1588  1171       0.8       2.1    5.8    1.8
+3        3  no    no   no  1116  1071       2.2       2.4   10.8    1.8
+4        4  no   yes   no   959  3671       8.6       3.2   28.3    2.9
+5        5  no    no   no   529   857       2.9       0.9   12.7    0.4
+6        6  no    no   no   755   663       1.2       1.7    5.1    0.4
+  literacy60
+1         10
+2          5
+3          5
+4         NA
+5          2
+6         14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 121</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df after cleaning</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  rownames oil inter oecd gdp60 gdp85 gdpgrowth popgrowth invest school
+1        1  no   yes   no  2485  4371       4.8       2.6   24.1    4.5
+2        2  no    no   no  1588  1171       0.8       2.1    5.8    1.8
+3        3  no    no   no  1116  1071       2.2       2.4   10.8    1.8
+5        5  no    no   no   529   857       2.9       0.9   12.7    0.4
+6        6  no    no   no   755   663       1.2       1.7    5.1    0.4
+7        7  no   yes   no   889  2190       5.7       2.1   12.8    3.4
+  literacy60
+1         10
+2          5
+3          5
+5          2
+6         14
+7         19</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows.">5. How many rows does your data set have? There should be at least 30 rows.</h3>
+<p>Answer: My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames.</p>
+</section>
+<section id="how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units.">6. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent <strong>and</strong> their units.</h3>
+<p>If there are more than (say) 5 quantitative variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.</p>
+<p>Answer: There are 8 quantitative variables and I considered choosing 4 of them as of right now. Key details:</p>
+<p>gdpgrowth (numerical)</p>
+<ul>
+<li>Average growth rate of per capita GDP from 1960 to 1985 (in percent).</li>
+</ul>
+<p>popgrowth (numerical)</p>
+<ul>
+<li>Average growth rate of working-age population 1960 to 1985 (in percent).</li>
+</ul>
+<p>invest (numerical)</p>
+<ul>
+<li>Average ratio of investment (including Government Investment) to GDP from 1960 to 1985 (in percent).</li>
+</ul>
+<p>school (numerical)</p>
+<ul>
+<li>Average fraction of working-age population enrolled in secondary school from 1960 to 1985 (in percent).</li>
+</ul>
+</section>
+<section id="how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories.">7. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.</h3>
+<p>If there are more than (say) 3 categorical variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.</p>
+<p>There are 3 categorical variables and I considered choosing 2 of them as of right now. Key details:</p>
+<p>oil (categorical)</p>
+<ul>
+<li>Factor. Is the country an oil-producing country?</li>
+</ul>
+<p>oecd (categorical)</p>
+<ul>
+<li>Factor. Is the country a member of the OECD?</li>
+</ul>
+</section>
+<section id="checkpoint-2" class="level1">
+<h1>Checkpoint 2</h1>
+<section id="what-variables-in-your-data-set-are-you-interested-in-are-they-quantitative-or-categorical-if-quantitative-provide-the-units.-if-categorical-list-or-describe-the-categories." class="level3">
+<h3 class="anchored" data-anchor-id="what-variables-in-your-data-set-are-you-interested-in-are-they-quantitative-or-categorical-if-quantitative-provide-the-units.-if-categorical-list-or-describe-the-categories.">1. What variables in your data set are you interested in? Are they quantitative or categorical? If quantitative, provide the units. If categorical, list or describe the categories.</h3>
+<p>I am interested in seeing if the oil producing status of a country will affect the per capita gdp growth of that country. For this I am interested in oil variable which has two category “yes” and “no” (categorical variable), gdpgrowth (numerical variable), school (numerical variable) and invest (numerical variable) to also see if school or investment can also confound the gdp growth of a country even if the country produces an oil?</p>
+</section>
+<section id="what-does-one-observational-unit-row-represent-in-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-one-observational-unit-row-represent-in-your-data-set">2. What does one observational unit (row) represent in your data set?</h3>
+<p>Each row in my data set corresponds to a single “country‐year” observation—that is, one country in one specific year.</p>
+</section>
+<section id="how-was-the-sample-obtained-if-you-can-find-what-the-sampling-method-was-include-that-information.-also-include-what-year-the-data-was-collected" class="level3">
+<h3 class="anchored" data-anchor-id="how-was-the-sample-obtained-if-you-can-find-what-the-sampling-method-was-include-that-information.-also-include-what-year-the-data-was-collected">3. How was the sample obtained? If you can find what the sampling method was, include that information. Also include what year the data was collected</h3>
+</section>
+<section id="a.-if-any-of-this-information-isnt-available-state-that." class="level3">
+<h3 class="anchored" data-anchor-id="a.-if-any-of-this-information-isnt-available-state-that.">a. If any of this information isn’t available, state that.</h3>
+<p>The GrowthDJ dataset covers 121 countries for which Penn World Table 4.0 and World Bank (World Development Report) data were available, averaged over 1960–1985. Sampling method has not been explicitly stated in the data set.</p>
+</section>
+<section id="b.-how-did-you-access-the-data-include-a-hyperlink-and-the-date-time-you-most-recently-accessed-the-data." class="level3">
+<h3 class="anchored" data-anchor-id="b.-how-did-you-access-the-data-include-a-hyperlink-and-the-date-time-you-most-recently-accessed-the-data.">b. How did you access the data? (Include a hyperlink, and the date + time you most recently accessed the data.)</h3>
+<p>https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html, 4/30/2025 10:08 PM</p>
+</section>
+<section id="do-your-quantitative-variables-have-the-correct-types-e.g.-double-for-decimals-integer-for-whole-numbers-etc..-if-not-set-them-to-be-the-correct-type.-you-can-check-the-type-of-a-variable-using-the-class-function." class="level3">
+<h3 class="anchored" data-anchor-id="do-your-quantitative-variables-have-the-correct-types-e.g.-double-for-decimals-integer-for-whole-numbers-etc..-if-not-set-them-to-be-the-correct-type.-you-can-check-the-type-of-a-variable-using-the-class-function.">4. Do your quantitative variables have the correct types (e.g., double for decimals, integer for whole numbers, etc.). If not, set them to be the correct type. You can check the type of a variable using the class() function.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df_clean<span class="sc">$</span>gdpgrowth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df_clean<span class="sc">$</span>invest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df_clean<span class="sc">$</span>school)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+</div>
+<p>All my quantitative variables have the correct types.</p>
+</section>
+<section id="do-your-categorical-variables-have-the-type-factor-if-not-give-them-this-type-to-tell-r-that-they-are-categorical." class="level3">
+<h3 class="anchored" data-anchor-id="do-your-categorical-variables-have-the-type-factor-if-not-give-them-this-type-to-tell-r-that-they-are-categorical.">5. Do your categorical variables have the type factor? If not, give them this type to tell R that they are categorical.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df_clean<span class="sc">$</span>oil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df_clean<span class="sc">$</span>oil <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df_clean<span class="sc">$</span>oil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="are-there-any-missing-values-for-your-variables-listed-in-9-if-so-filter-them-out.-note-some-data-sets-use-empty-strings-to-denote-missing-values-so-check-for-these-as-well." class="level3">
+<h3 class="anchored" data-anchor-id="are-there-any-missing-values-for-your-variables-listed-in-9-if-so-filter-them-out.-note-some-data-sets-use-empty-strings-to-denote-missing-values-so-check-for-these-as-well.">6. Are there any missing values for your variables listed in (9)? If so, filter them out. Note: Some data sets use empty strings “” to denote missing values, so check for these as well.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> df_clean <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(oil) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(gdpgrowth) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(invest)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(school)) </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-observational-units-rows-do-you-have-after-the-previous-step" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-observational-units-rows-do-you-have-after-the-previous-step">7. How many observational units (rows) do you have after the previous step?</h3>
+<p>There are 100 observational units (rows) after cleaning the data set.</p>
+</section>
+<section id="does-the-source-of-data-say-that-certain-data-points-are-missing-for-example-in-nhanes-we-are-told-that-the-variable-height-is-measured-only-for-participants-aged-2-years-or-older-meaning-height-will-have-na-values-in-rows-corresponding-to-participants-under-2.-if-not-available-in-the-data-description-why-do-you-think-some-data-points-are-missing-is-the-mechanism-for-missingness-completely-random-or-could-there-be-something-systematic-which-leads-to-greater-rates-of-missingness-its-okay-if-youre-not-sure-how-to-answer-this-question-just-do-your-best-to-think-about-it." class="level3">
+<h3 class="anchored" data-anchor-id="does-the-source-of-data-say-that-certain-data-points-are-missing-for-example-in-nhanes-we-are-told-that-the-variable-height-is-measured-only-for-participants-aged-2-years-or-older-meaning-height-will-have-na-values-in-rows-corresponding-to-participants-under-2.-if-not-available-in-the-data-description-why-do-you-think-some-data-points-are-missing-is-the-mechanism-for-missingness-completely-random-or-could-there-be-something-systematic-which-leads-to-greater-rates-of-missingness-its-okay-if-youre-not-sure-how-to-answer-this-question-just-do-your-best-to-think-about-it.">8. Does the source of data say that certain data points are missing? (For example, in NHANES we are told that the variable Height is measured only for participants aged 2 years or older, meaning Height will have NA values in rows corresponding to participants under 2.) If not available in the data description, why do you think some data points are missing? Is the mechanism for missingness completely random, or could there be something systematic which leads to greater rates of missingness? It’s okay if you’re not sure how to answer this question — just do your best to think about it.</h3>
+<p>The GrowthDJ data don’t specify this rule, so any NAs (e.g.&nbsp;in school, literacy60 or invest) likely reflect gaps in historical reporting especially for low-income or non-OECD countries with weaker statistical systems.</p>
+</section>
+<section id="provide-any-numerical-summaries-that-are-relevant-to-your-research-question.-these-are-highly-dependent-on-your-question-but-some-ideas-are" class="level3">
+<h3 class="anchored" data-anchor-id="provide-any-numerical-summaries-that-are-relevant-to-your-research-question.-these-are-highly-dependent-on-your-question-but-some-ideas-are">9. Provide any numerical summaries that are relevant to your research question. These are highly dependent on your question, but some ideas are:</h3>
+</section>
+<section id="for-one-quantitative-variable-some-relevant-numerical-summaries-involve" class="level2">
+<h2 class="anchored" data-anchor-id="for-one-quantitative-variable-some-relevant-numerical-summaries-involve">For one quantitative variable, some relevant numerical summaries involve:</h2>
+</section>
+<section id="a.-one-measure-of-center-e.g.-mean-median" class="level2">
+<h2 class="anchored" data-anchor-id="a.-one-measure-of-center-e.g.-mean-median">a. One measure of center (e.g., mean, median);</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_clean<span class="sc">$</span>gdpgrowth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ -0.900   2.700   3.800   3.973   5.125   9.200 </code></pre>
+</div>
+</div>
+</section>
+<section id="b.-one-measure-of-spread-e.g.-standard-deviation-variance-iqr-a-minimummaximum" class="level2">
+<h2 class="anchored" data-anchor-id="b.-one-measure-of-spread-e.g.-standard-deviation-variance-iqr-a-minimummaximum">b. One measure of spread (e.g., standard deviation, variance, IQR, a minimum/maximum);</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(df_clean<span class="sc">$</span>gdpgrowth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.81547</code></pre>
+</div>
+</div>
+</section>
+<section id="c.-an-overall-count-how-many-observations-do-you-have" class="level2">
+<h2 class="anchored" data-anchor-id="c.-an-overall-count-how-many-observations-do-you-have">c.&nbsp;An overall count (how many observations do you have?)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+</div>
+</section>
+<section id="for-one-categorical-variable-a-relevant-numerical-summary-might-be" class="level2">
+<h2 class="anchored" data-anchor-id="for-one-categorical-variable-a-relevant-numerical-summary-might-be">For one categorical variable, a relevant numerical summary might be:</h2>
+</section>
+<section id="a.-the-of-observations-in-each-category-i.e.-use-count" class="level2">
+<h2 class="anchored" data-anchor-id="a.-the-of-observations-in-each-category-i.e.-use-count">a. the # of observations in each category (i.e., use count());</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df_clean<span class="sc">$</span>oil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ no yes 
+ 96   4 </code></pre>
+</div>
+</div>
+</section>
+<section id="b.-the-proportion-or-percentage-of-observations-in-each-category." class="level2">
+<h2 class="anchored" data-anchor-id="b.-the-proportion-or-percentage-of-observations-in-each-category.">b. the proportion (or percentage) of observations in each category.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>prop <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(df_clean<span class="sc">$</span>oil))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>prop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  no  yes 
+0.96 0.04 </code></pre>
+</div>
+</div>
+<section id="provide-any-visualizations-that-are-relevant-to-your-research-question.-chapter-2-in-this-online-text-is-a-good-resource-for-creating-different-plots." class="level3">
+<h3 class="anchored" data-anchor-id="provide-any-visualizations-that-are-relevant-to-your-research-question.-chapter-2-in-this-online-text-is-a-good-resource-for-creating-different-plots.">10. Provide any visualizations that are relevant to your research question. Chapter 2 in this online text is a good resource for creating different plots.</h3>
+</section>
+</section>
+<section id="the-choice-of-visualization-can-be-highly-dependent-on-your-question-but-some-ideas-are" class="level2">
+<h2 class="anchored" data-anchor-id="the-choice-of-visualization-can-be-highly-dependent-on-your-question-but-some-ideas-are">The choice of visualization can be highly dependent on your question, but some ideas are:</h2>
+</section>
+<section id="a.-a-visual-summary-of-your-quantitative-outcome-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="a.-a-visual-summary-of-your-quantitative-outcome-of-interest">a. A visual summary of your (quantitative) outcome of interest:</h2>
+</section>
+<section id="i.-examples-a-density-plot-a-box-plot-a-histogram-a-relative-frequency-histogram-etc." class="level2">
+<h2 class="anchored" data-anchor-id="i.-examples-a-density-plot-a-box-plot-a-histogram-a-relative-frequency-histogram-etc.">i. Examples: a density plot, a box plot, a histogram, a relative frequency histogram, etc.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_clean, <span class="fu">aes</span>(<span class="at">x =</span> gdpgrowth)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Per-Capita GDP Growth"</span>, <span class="at">x =</span> <span class="st">"GDP Growth"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FPCP2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="b.-a-visual-summary-of-your-predictors-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="b.-a-visual-summary-of-your-predictors-of-interest">b. A visual summary of your predictor(s) of interest:</h2>
+</section>
+<section id="i.-for-one-categorical-predictor-you-could-do-a-bar-chart-mosaic-plot-etc." class="level2">
+<h2 class="anchored" data-anchor-id="i.-for-one-categorical-predictor-you-could-do-a-bar-chart-mosaic-plot-etc.">i. For one categorical predictor, you could do a bar chart, mosaic plot, etc.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_clean, <span class="fu">aes</span>(<span class="at">x =</span> oil)) <span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">color=</span><span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"pink"</span>) <span class="sc">+</span><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Count of Oil-Producing Status"</span>,<span class="at">x=</span> <span class="st">"Oil-Producing Status"</span>, <span class="at">y=</span> <span class="st">"Count"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FPCP2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="c.-a-visual-summary-of-the-relationship-between-one-quantitative-variable-and-one-or-more-different-variables" class="level2">
+<h2 class="anchored" data-anchor-id="c.-a-visual-summary-of-the-relationship-between-one-quantitative-variable-and-one-or-more-different-variables">c.&nbsp;A visual summary of the relationship between one quantitative variable and one or more different variables:</h2>
+</section>
+<section id="i.-ideas-scatter-plots-maybe-with-points-colored-by-a-category-of-some-categorical-variable-side-by-side-histograms-side-by-side-box-plots-side-by-side-histograms-overlaid-density-plots-etc." class="level2">
+<h2 class="anchored" data-anchor-id="i.-ideas-scatter-plots-maybe-with-points-colored-by-a-category-of-some-categorical-variable-side-by-side-histograms-side-by-side-box-plots-side-by-side-histograms-overlaid-density-plots-etc.">i. Ideas: scatter plots (maybe with points colored by a category of some categorical variable), side-by-side histograms, side-by-side box plots, side-by-side histograms, overlaid density plots, etc.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_clean, <span class="fu">aes</span>(<span class="at">x =</span> invest, <span class="at">y =</span> gdpgrowth, <span class="at">color =</span> oil)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"GDP Growth vs. Investment Ratio, by Oil Status"</span>,<span class="at">x=</span> <span class="st">" Average ratio of Investment in percentage"</span>,<span class="at">y =</span> <span class="st">"Per-Capita GDP Growth"</span>,<span class="at">color =</span> <span class="st">"Oil Producer"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FPCP2_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_clean, <span class="fu">aes</span>(<span class="at">x =</span> gdpgrowth, <span class="at">color =</span> oil)) <span class="sc">+</span><span class="fu">geom_density</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Density of GDP Growth by Oil Status"</span>,<span class="at">x =</span> <span class="st">"Per-Capita GDP Growth"</span>,<span class="at">y =</span> <span class="st">"Density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FPCP2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

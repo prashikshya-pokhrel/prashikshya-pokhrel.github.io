@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Prashikshya">
 
-<title>About Me – Prashikshya Pokhrel’s Website</title>
+<title>Final Project: Checkpoint 1 – Prashikshya Pokhrel’s Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,12 +101,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+</head><body class="nav-fixed">\usepackage{booktabs}
 
 
 <link rel="stylesheet" href="styles.css">
-</head>
 
-<body class="nav-fixed">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,12 +129,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Test.html"> 
-<span class="menu-text">STAT 244-SC</span></a>
+<span class="menu-text">Test</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,21 +147,40 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#review-the" id="toc-review-the" class="nav-link active" data-scroll-target="#review-the">1. Review the </a></li>
+  <li><a href="#describe-your-data-set-in-1---2-sentences." id="toc-describe-your-data-set-in-1---2-sentences." class="nav-link" data-scroll-target="#describe-your-data-set-in-1---2-sentences.">2. Describe your data set in 1 - 2 sentences.</a></li>
+  <li><a href="#what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." id="toc-what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." class="nav-link" data-scroll-target="#what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here.">3. What is the source of your data set? Include a link to where you got it here.</a></li>
+  <li><a href="#load-your-data-set-using-the-code-chunk-below." id="toc-load-your-data-set-using-the-code-chunk-below." class="nav-link" data-scroll-target="#load-your-data-set-using-the-code-chunk-below.">4. Load your data set using the code chunk below.</a></li>
+  <li><a href="#how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." id="toc-how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." class="nav-link" data-scroll-target="#how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows.">5. How many rows does your data set have? There should be at least 30 rows.</a></li>
+  <li><a href="#how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." id="toc-how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." class="nav-link" data-scroll-target="#how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units.">6. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent <strong>and</strong> their units.</a></li>
+  <li><a href="#how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." id="toc-how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." class="nav-link" data-scroll-target="#how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories.">7. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">Final Project: Checkpoint 1</h1>
+<p class="subtitle lead">STAT 244</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prashikshya </p>
+          </div>
+  </div>
     
   
     
@@ -136,10 +191,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hi! My name is Prashikshya Pokhrel, I am a Junior and a Data Science major at Mount Holyoke College. I am interested in statistics and causal inference. And this is my website!</p>
-<p><img src="my_photo.jpg" class="img-fluid"> To contact me, please reach out via <a href="https://www.linkedin.com/in/pokhrelprashikshya/">LinkedIn</a></p>
+<section id="review-the" class="level3">
+<h3 class="anchored" data-anchor-id="review-the">1. Review the </h3>
+</section>
+<section id="describe-your-data-set-in-1---2-sentences." class="level3">
+<h3 class="anchored" data-anchor-id="describe-your-data-set-in-1---2-sentences.">2. Describe your data set in 1 - 2 sentences.</h3>
+<p>Answer: The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf &amp; Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985.</p>
+</section>
+<section id="what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here." class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-source-of-your-data-set-include-a-link-to-where-you-got-it-here.">3. What is the source of your data set? Include a link to where you got it here.</h3>
+<p><strong>Note.</strong> If you would like to collect survey data from classmates or peers via a Google form, please let me know right away so we can set this up for you. In the meantime, create the Google Form and decide what information you want to collect.</p>
+<p>The following questions allow us to determine if your proposed data set meets the project criterion:</p>
+<p>Link: https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html</p>
+</section>
+<section id="load-your-data-set-using-the-code-chunk-below." class="level3">
+<h3 class="anchored" data-anchor-id="load-your-data-set-using-the-code-chunk-below.">4. Load your data set using the code chunk below.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"GrowthDJ.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  rownames oil inter oecd gdp60 gdp85 gdpgrowth popgrowth invest school
+1        1  no   yes   no  2485  4371       4.8       2.6   24.1    4.5
+2        2  no    no   no  1588  1171       0.8       2.1    5.8    1.8
+3        3  no    no   no  1116  1071       2.2       2.4   10.8    1.8
+4        4  no   yes   no   959  3671       8.6       3.2   28.3    2.9
+5        5  no    no   no   529   857       2.9       0.9   12.7    0.4
+6        6  no    no   no   755   663       1.2       1.7    5.1    0.4
+  literacy60
+1         10
+2          5
+3          5
+4         NA
+5          2
+6         14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 121</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df after cleaning</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  rownames oil inter oecd gdp60 gdp85 gdpgrowth popgrowth invest school
+1        1  no   yes   no  2485  4371       4.8       2.6   24.1    4.5
+2        2  no    no   no  1588  1171       0.8       2.1    5.8    1.8
+3        3  no    no   no  1116  1071       2.2       2.4   10.8    1.8
+5        5  no    no   no   529   857       2.9       0.9   12.7    0.4
+6        6  no    no   no   755   663       1.2       1.7    5.1    0.4
+7        7  no   yes   no   889  2190       5.7       2.1   12.8    3.4
+  literacy60
+1         10
+2          5
+3          5
+5          2
+6         14
+7         19</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-rows-does-your-data-set-have-there-should-be-at-least-30-rows.">5. How many rows does your data set have? There should be at least 30 rows.</h3>
+<p>Answer: My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames.</p>
+</section>
+<section id="how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-quantitative-variables-are-in-your-data-set-there-should-be-at-least-3.-list-them-here-and-briefly-describe-what-they-represent-and-their-units.">6. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent <strong>and</strong> their units.</h3>
+<p>If there are more than (say) 5 quantitative variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.</p>
+<p>Answer: There are 8 quantitative variables and I considered choosing 4 of them as of right now. Key details:</p>
+<p>gdpgrowth (numerical)</p>
+<ul>
+<li>Average growth rate of per capita GDP from 1960 to 1985 (in percent).</li>
+</ul>
+<p>popgrowth (numerical)</p>
+<ul>
+<li>Average growth rate of working-age population 1960 to 1985 (in percent).</li>
+</ul>
+<p>invest (numerical)</p>
+<ul>
+<li>Average ratio of investment (including Government Investment) to GDP from 1960 to 1985 (in percent).</li>
+</ul>
+<p>school (numerical)</p>
+<ul>
+<li>Average fraction of working-age population enrolled in secondary school from 1960 to 1985 (in percent).</li>
+</ul>
+</section>
+<section id="how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories." class="level3">
+<h3 class="anchored" data-anchor-id="how-many-categorical-variables-does-your-data-set-have-there-should-be-at-least-1.-list-the-categorical-variables-here-along-with-their-corresponding-categories.">7. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.</h3>
+<p>If there are more than (say) 3 categorical variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.</p>
+<p>There are 3 categorical variables and I considered choosing 2 of them as of right now. Key details:</p>
+<p>oil (categorical)</p>
+<ul>
+<li>Factor. Is the country an oil-producing country?</li>
+</ul>
+<p>oecd (categorical)</p>
+<ul>
+<li>Factor. Is the country a member of the OECD?</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

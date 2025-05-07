@@ -1,0 +1,100 @@
+---
+title: "Final Project: Checkpoint 1"
+subtitle: "STAT 244"
+author: "Prashikshya"
+output:
+  pdf_document:
+    fig_height: 1.5
+    fig_width: 4
+    highlight: zenburn
+header-includes:
+  - \usepackage{booktabs}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = TRUE)
+library(readr)
+library(purrr)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(mosaic)
+library(gmodels)
+library(Sleuth3)
+```
+
+
+### 1. Review the \href{https://docs.google.com/document/d/11G6wyZeNyfobAQm-yCaBj0d8C3wCuxCmKqwaErpTMcQ/edit?usp=sharing}{\textcolor{blue}{Final Project Description document}}
+
+
+### 2. Describe your data set in 1 - 2 sentences.
+
+Answer:  The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf & Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985.
+
+### 3. What is the source of your data set? Include a link to where you got it here.
+
+**Note.** If you would like to collect survey data from classmates or peers via a Google form, please let me know right away so we can set this up for you. In the meantime, create the Google Form and decide what information you want to collect. 
+
+The following questions allow us to determine if your proposed data set meets the project criterion:
+
+Link: https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html
+
+### 4. Load your data set using the code chunk below.
+
+```{r}
+df = read.csv("GrowthDJ.csv")
+head(df)
+nrow(df)
+ncol(df)
+
+# df after cleaning
+df_clean <- na.omit(df)
+head(df_clean)
+nrow(df_clean)
+ncol(df_clean)
+```
+
+### 5. How many rows does your data set have? There should be at least 30 rows.
+
+Answer: My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames. 
+
+### 6. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent **and** their units. 
+
+If there are more than (say) 5 quantitative variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding. 
+
+Answer: There are 8 quantitative variables and I considered choosing 4 of them as of right now. Key details:
+
+gdpgrowth (numerical)
+
+- Average growth rate of per capita GDP from 1960 to 1985 (in percent).
+
+popgrowth (numerical)
+
+- Average growth rate of working-age population 1960 to 1985 (in percent).
+
+invest (numerical) 
+
+- Average ratio of investment (including Government Investment) to GDP from 1960 to 1985 (in percent).
+
+school (numerical)
+
+- Average fraction of working-age population enrolled in secondary school from 1960 to 1985 (in percent).
+
+
+### 7. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.
+
+If there are more than (say) 3 categorical variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding. 
+
+There are 3 categorical variables and I considered choosing 2 of them as of right now. Key details:
+
+oil (categorical)
+
+- Factor. Is the country an oil-producing country?
+
+oecd (categorical)
+
+- Factor. Is the country a member of the OECD?
+
+
+
+
