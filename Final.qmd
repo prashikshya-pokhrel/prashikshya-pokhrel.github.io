@@ -19,43 +19,25 @@ library(Sleuth3)
 library(tidyverse) 
 library(tidymodels) 
 library(readxl)
+
 ```
 
-### 1. Describe your data set in 1 - 2 sentences.
+# Introduction 
 
-Answer: The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf & Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985.
+The GrowthDJ dataset is a cross-country growth‐regression sample compiled by Durlauf & Johnson (1995). It contains 121 observations on 10 variables, covering the period 1960–1985. <https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html>
 
-### 2. What is the source of your data set? Include a link to where you got it here.
-
-**Note.** If you would like to collect survey data from classmates or peers via a Google form, please let me know right away so we can set this up for you. In the meantime, create the Google Form and decide what information you want to collect.
-
-The following questions allow us to determine if your proposed data set meets the project criterion:
-
-Ansewr: <https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html>
-
-### 3. Load your data set using the code chunk below.
+### Load the data set
 
 ```{r}
 df = read.csv("GrowthDJ.csv") 
 head(df) 
 nrow(df) 
 ncol(df) 
-# df after cleaning 
-df_clean <- na.omit(df) 
-head(df_clean) 
-nrow(df_clean) 
-ncol(df_clean)
+
+
 ```
 
-### 4. How many rows does your data set have? There should be at least 30 rows.
-
-Answer: My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames.
-
-### 5. How many quantitative variables are in your data set? There should be at least 3. List them here and briefly describe what they represent **and** their units.
-
-Answer: If there are more than (say) 5 quantitative variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.
-
-Answer: There are 8 quantitative variables and I considered choosing 4 of them as of right now. Key details:
+My dataset had 121 rows initially but after cleaning and dropping the empty rows, now it has 100 rows and 11 columns including rownames. There are 8 quantitative variables and I considered choosing 4 of them as of right now. Key details:
 
 gdpgrowth (numerical)
 
@@ -71,13 +53,7 @@ invest (numerical)
 
 school (numerical)
 
--   Average fraction of working-age population enrolled in secondary school from 1960 to 1985 (in percent).
-
-### 6. How many categorical variables does your data set have? There should be at least 1. List the categorical variable(s) here along with their corresponding categories.
-
-Answer: If there are more than (say) 3 categorical variables in your data set, you only need to list the ones you would like to consider. You can of course decide to consider other variables later; your choices in the checkpoints are not binding.
-
-There are 3 categorical variables and I considered choosing 2 of them as of right now. Key details:
+-   Average fraction of working-age population enrolled in secondary school from 1960 to 1985 (in percent). There are 3 categorical variables and I considered choosing 2 of them as of right now. Key details:
 
 oil (categorical)
 
@@ -87,25 +63,11 @@ oecd (categorical)
 
 -   Factor. Is the country a member of the OECD?
 
-### 7. What variables in your data set are you interested in? Are they quantitative or categorical? If quantitative, provide the units. If categorical, list or describe the categories.
+I am interested in seeing if the oil producing status of a country will affect the per capita gdp growth of that country. For this I am interested in oil variable which has two category "yes" and "no" (categorical variable), gdpgrowth (numerical variable), school (numerical variable) and invest (numerical variable) to also see if school or investment can also confound the gdp growth of a country even if the country produces an oil?
 
-Answer: I am interested in seeing if the oil producing status of a country will affect the per capita gdp growth of that country. For this I am interested in oil variable which has two category "yes" and "no" (categorical variable), gdpgrowth (numerical variable), school (numerical variable) and invest (numerical variable) to also see if school or investment can also confound the gdp growth of a country even if the country produces an oil?
+Each row in my data set corresponds to a single “country‐year” observation—that is, one country in one specific year. The GrowthDJ dataset covers 121 countries for which Penn World Table 4.0 and World Bank (World Development Report) data were available, averaged over 1960–1985. Sampling method has not been explicitly stated in the data set.
 
-### 8. What does one observational unit (row) represent in your data set?
-
-Answer: Each row in my data set corresponds to a single “country‐year” observation—that is, one country in one specific year.
-
-### 9. How was the sample obtained? If you can find what the sampling method was, include that information. Also include what year the data was collected
-
-##### a. If any of this information isn’t available, state that.
-
-Answer: The GrowthDJ dataset covers 121 countries for which Penn World Table 4.0 and World Bank (World Development Report) data were available, averaged over 1960–1985. Sampling method has not been explicitly stated in the data set.
-
-##### b. How did you access the data? (Include a hyperlink, and the date + time you most recently accessed the data.)
-
-Answer: <https://vincentarelbundock.github.io/Rdatasets/doc/AER/GrowthDJ.html>, 4/30/2025 10:08 PM
-
-### 10. Do your quantitative variables have the correct types (e.g., double for decimals, integer for whole numbers, etc.). If not, set them to be the correct type. You can check the type of a variable using the class() function.
+### Cleaning the data set
 
 ```{r}
 class(df_clean$gdpgrowth) 
@@ -113,16 +75,14 @@ class(df_clean$invest)
 class(df_clean$school) 
 ```
 
-Answer: All my quantitative variables have the correct types.
-
-### 11. Do your categorical variables have the type factor? If not, give them this type to tell R that they are categorical.
+All my quantitative variables have the correct types.
 
 ```{r}
 class(df_clean$oil) 
 df_clean$oil <- as.factor(df_clean$oil)
 ```
 
-### 12. Are there any missing values for your variables listed in (9)? If so, filter them out. Note: Some data sets use empty strings “” to denote missing values, so check for these as well.
+### Removing missing values
 
 ```{r}
 df_clean <- df_clean %>% 
@@ -130,15 +90,11 @@ df_clean <- df_clean %>%
 nrow(df_clean)
 ```
 
-### 13. How many observational units (rows) do you have after the previous step?
+There are 100 observational units (rows) after cleaning the data set.
 
-Answer: There are 100 observational units (rows) after cleaning the data set.
+The GrowthDJ data don’t specify this rule, so any NAs (e.g. in school, literacy60 or invest) likely reflect gaps in historical reporting especially for low-income or non-OECD countries with weaker statistical systems.
 
-### 14. Does the source of data say that certain data points are missing? (For example, in NHANES we are told that the variable Height is measured only for participants aged 2 years or older, meaning Height will have NA values in rows corresponding to participants under 2.) If not available in the data description, why do you think some data points are missing? Is the mechanism for missingness completely random, or could there be something systematic which leads to greater rates of missingness? It’s okay if you’re not sure how to answer this question — just do your best to think about it.
-
-Answer: The GrowthDJ data don’t specify this rule, so any NAs (e.g. in school, literacy60 or invest) likely reflect gaps in historical reporting especially for low-income or non-OECD countries with weaker statistical systems.
-
-### 15. Provide any numerical summaries that are relevant to your research question. These are highly dependent on your question, but some ideas are:
+### Summary Statistics
 
 ##### For one quantitative variable, some relevant numerical summaries involve:
 
@@ -148,19 +104,17 @@ Answer: The GrowthDJ data don’t specify this rule, so any NAs (e.g. in school,
 summary(df_clean$gdpgrowth) 
 ```
 
+The average per-capita GDP growth rate in the sample is about **3.97 %**, with a median of **3.8 %**, indicating a roughly symmetric distribution. Growth rates range from a low of **–0.9 %** to a high of **9.2 %**. Fifty percent of countries fall between **2.7 %** (the first quartile) and **5.13 %** (the third quartile).
+
 ##### b. One measure of spread (e.g., standard deviation, variance, IQR, a minimum/maximum);
 
 ```{r}
 sd(df_clean$gdpgrowth) 
 ```
 
-##### c. An overall count (how many observations do you have?)
+The sd of 1.81 means the GDP growth rates in the dataset typically deviate from the mean by about 1.82 units on average.
 
-```{r}
-nrow(df_clean) 
-```
-
-##### For one categorical variable, a relevant numerical summary might be:
+##### For one categorical variable, a relevant numerical summary:
 
 ##### a. The \# of observations in each category (i.e., use count());
 
@@ -175,53 +129,47 @@ prop <- prop.table(table(df_clean$oil))
 prop
 ```
 
-### 16. Provide any visualizations that are relevant to your research question. Chapter 2 in this online text is a good resource for creating different plots.
+The vast majority (96%) of observations lack oil, while only 4% have oil. This could imply that oil presence is rare in the dataset.
 
-##### The choice of visualization can be highly dependent on your question, but some ideas are:
-
-##### a. A visual summary of your (quantitative) outcome of interest:
-
-##### i. Examples: a density plot, a box plot, a histogram, a relative frequency histogram, etc.
+### Visualizations
 
 ```{r}
 ggplot(df_clean, aes(x = gdpgrowth)) + geom_histogram(binwidth = 1, fill = "white", color = "black") + labs(title = "Histogram of Per-Capita GDP Growth", x = "GDP Growth", y = "Count") 
+
 ```
 
-##### b. A visual summary of your predictor(s) of interest:
-
-##### i. For one categorical predictor, you could do a bar chart, mosaic plot, etc.
+Most GDP growth values are clustered at the lower end (left side), with fewer observations at higher growth rates. This suggests that most countries/regions in the dataset exhibit modest GDP growth (near 0.0–2.5) and high growth rates (e.g., above 5.0) are rare outliers.
 
 ```{r}
 ggplot(df_clean, aes(x = oil)) +geom_bar(color="black", fill="pink") +labs(title = "Count of Oil-Producing Status",x= "Oil-Producing Status", y= "Count") + theme_minimal() 
+
 ```
 
-##### c. A visual summary of the relationship between one quantitative variable and one or more different variables:
-
-##### i. Ideas: scatter plots (maybe with points colored by a category of some categorical variable), side-by-side histograms, side-by-side box plots, side-by-side histograms, overlaid density plots, etc.
+As we can see from the bar chart, the majority of the country in the data set are not oil producing.
 
 ```{r}
 ggplot(df_clean, aes(x = invest, y = gdpgrowth, color = oil)) + geom_point(alpha = 0.7) + labs(title = "GDP Growth vs. Investment Ratio, by Oil Status",x= " Average ratio of Investment in percentage",y = "Per-Capita GDP Growth",color = "Oil Producer") 
 ```
 
+The plot likely shows a positive relationship between investment ratio and GDP growth. There seem to be potential differences between oil/non-oil producers (e.g., oil producers might cluster differently). As the investment ratio increases, GDP growth tends to rise, suggesting investment is a driver of economic growth. Non oil producing countries may show a clearer upward trend, indicating that investment strongly boosts growth in these economies whereas oil producing countries might exhibit more variability or lower growth at similar investment levels, possibly due to reliance on oil revenues rather than productive investment.
+
 ```{r}
 ggplot(df_clean, aes(x = gdpgrowth, color = oil)) +geom_density(size = 1) +labs(title = "Density of GDP Growth by Oil Status",x = "Per-Capita GDP Growth",y = "Density")  
 ```
 
+This is a density plot comparing the distribution of Per-Capita GDP Growth between two groups: countries with oil production ("yes") and those without ("no").  GDP growth is tightly clustered around lower values, suggesting stable but modest growth. The tall, narrow peak implies low variability; most non-oil economies grow at similar rates. The curve is wider, indicating higher variability in GDP growth. Some oil economies may have very high growth, while others struggle .
+
 # Cross Validation (CV)
 
-### 1. Write a brief introduction to cross validation which includes relevant mathematical notation.
+### Introduction
 
-Answer: Cross validation is a statistical method used in machine learning to evaluate how well a model performs in an unseen or independent data set. It involves dividing the data set into multiple folds or subsets, using one of these folds as a validation set and training the model on the remaining folds. This process is then repeated multiple times each time using different fold as the validation set. The main purpose of cross validation is to prevent over fitting which occurs when a model is trained too well on the training data and performs poorly on new, unseen data
+Cross validation is a statistical method used in machine learning to evaluate how well a model performs in an unseen or independent data set. It involves dividing the data set into multiple folds or subsets, using one of these folds as a validation set and training the model on the remaining folds. This process is then repeated multiple times each time using different fold as the validation set. The main purpose of cross validation is to prevent over fitting which occurs when a model is trained too well on the training data and performs poorly on new, unseen data
 
 $\mathrm{CV}(k) = \frac{1}{k}\sum_{j=1}^k \mathrm{MAE}_j$
 
-### 2. What is the goal of cross-validation? (Hint: Think about over-fitting, along with social/ethical considerations)
+The goal of cross validation is to ensure that a model generalizes well beyond the data on which it was trained by repeatedly holding out different subsets fir testing, it guards against over fitting and produces an approximately unbiased estimate of out of sample error. This process not only helps in selecting and tuning models that truly capture underlying patterns rather than noise, but also promotes robustness and fairness: by validating across different folds.
 
-Answer: The goal of cross validation is to ensure that a model generalizes well beyond the data on which it was trained by repeatedly holding out different subsets fir testing, it guards against over fitting and produces an approximately unbiased estimate of out of sample error. This process not only helps in selecting and tuning models that truly capture underlying patterns rather than noise, but also promotes robustness and fairness: by validating across different folds.
-
-### 3. What linear models are you considering based on your research question? Pick at least two models to compare.
-
-Answer: I am considering two models. One model which is unadjusted model (model_1) which doesn't contain confounders and another model which is adjusted model (model_2) that includes the confounders.
+I am considering two models. One model which is unadjusted model (model_1) which doesn't contain confounders and another model which is adjusted model (model_2) that includes the confounders.
 
 ```{r}
 # Step 1: Model specification  
@@ -244,9 +192,9 @@ model_2 <- lm_spec %>%
   fit(gdpgrowth ~ oil + school + invest, data = df_clean)
 ```
 
-### 4. Explain how you divided your data into its test set and training set.
+### Train set/ Test set
 
-Answer: I split the data into two parts –a training set (80% of the observations) and a test set (the remaining 20%) so that we could both tune our models and then evaluate their performance on truly unseen data.
+I split the data into two parts –a training set (80% of the observations) and a test set (the remaining 20%) so that we could both tune our models and then evaluate their performance on truly unseen data.
 
 ```{r}
 split <- initial_split(df_clean, prop = 0.8, strata = "oil")   
@@ -255,9 +203,9 @@ train_data <- training(split)
 test_data  <- testing(split)
 ```
 
-### 5. State which error metric you are using (MAE or MSE) and give its formal mathematical definition. Why did you choose this error metric? What are the advantages/disadvantages of using it?
+### Error Metric
 
-Answer: I will be using MAE. The formal mathematical definition is:
+I will be using MAE. The formal mathematical definition is:
 
 $\mathrm{MAE} = \displaystyle\frac{1}{n}\sum_{i=1}^n |y_i - \hat y_i|$
 
@@ -265,9 +213,7 @@ I chose this error metric because it produces an error metric in the same units 
 
 However, it does have some drawbacks like MAE treats every error the same so one huge miss and several small misses can look equally bad even though we might just care about the big one.
 
-### 6. Implement k-fold cross validation for k = 10.
-
-Answer:
+### Implementing k-fold
 
 ```{r}
 # 10-fold cross validation for model_1 
@@ -288,9 +234,7 @@ model_2_cv <- lm_spec %>%
 
 ```
 
-### 7. Display evaluation metrics for your different models in a clean, organized way. This display should include both the estimated CV metric as well as its standard deviation.
-
-Answer:
+### Display evaluation metrics for the different models 
 
 ```{r}
 model_1_cv %>%      
@@ -335,9 +279,17 @@ model_2_cv %>%
 | model_1 | 1.39          | 1.44           | 0.42                |
 | model_2 | 1.34          | 1.42           | 0.26                |
 
-### 8. Try different values of k (the tuning parameter). At minimum, try k = n - 1 (LOOCV), and k = 5. Which value of k has the smallest CV error?
+This table compares the performance of two predictive models (model_1 and model_2) using three key metrics: In-Sample MAE, 10-fold Cross-Validation (CV) MAE, and Standard Deviations of the CV results.
 
-Answer: 5-fold CV gave the lowest mean MAE, so we will use k=5.
+In sample MAE measures the model's error when predicting on the same data it was trained on. The lower values indicate better fit.
+
+10-fold CV MAE evaluates the model's error on unseen data using cross-validation (splitting data into 10 parts, training on 9, testing on 1). It is more reliable than in-sample MAE for estimating real-world performance.
+
+Standard Deviations reflects the variability of MAE scores across the 10 CV folds. The lower values indicate more consistent performance.
+
+Overall model_2 outperforms model_1 in both in-sample and cross-validation MAE, suggesting it generalizes better to new data. The smaller standard deviation for model_2 implies its performance is more reliable across different data splits.
+
+### Try k = n - 1 (LOOCV), and k = 5. 
 
 ```{r}
 # LOOCV  
@@ -366,6 +318,8 @@ model_1_cv5 %>%
   collect_metrics()
 ```
 
+Both LOOCV and 5-fold CV give a very similar MAE (\~1.44). LOOCV has a smaller SE because it uses many “folds” (one per observation), while 5-fold has a larger SE with only five splits. Since their mean errors are nearly the same, choosing 5-fold CV for speed is reasonable, especially given its comparable accuracy.
+
 ```{r}
 model_2_loocv <- lm_spec %>%      
   fit_resamples(gdpgrowth~oil+school+invest,                      
@@ -392,9 +346,9 @@ model_2_cv5 %>%
   collect_metrics()
 ```
 
-### 9. Select your final model based on which one has the smallest CV error.
+Both CV methods yield nearly identical MAE (1.43 vs. 1.44), indicating the model’s performance is stable. LOOCV has slightly lower mean MAE (1.4257) but is much more computationally intensive and often over-estimates error variance when folds are highly correlated. 5-Fold CV gives virtually the same MAE (1.4375) with a comparable standard error and is far faster.
 
-Answer: Model 2 has the smallest CV error compared to model 1. So, model_2 is my final model.
+### Selecting final model based on the smallest CV error
 
 ```{r}
 # Refit the chosen model on all of train_data
@@ -414,23 +368,25 @@ test_mae
 
 ```
 
+On the 20 held-out countries, the finalized regression’s predictions missed the actual growth rates by an average of 1.69 percent.
+
 ## LASSO
 
-### 1. Write a brief introduction to LASSO which includes relevant mathematical notation.
+### Introduction
 
-Answer: LASSO is a penalized regression method that shrinks coefficient estimates and performs variable selection.
+LASSO is a penalized regression method that shrinks coefficient estimates and performs variable selection.
 
 $\mathrm{RSS} + \lambda \sum_{j=1}^p |\beta_j|$
 
 where lambda \>= 0 is a tuning parameter controlling the strength of the L1 penalty. As lambda grows more coefficients are shrinking towards 0 or exactly to 0 which yields a model that is easier to interpret and often stable in the presence of multicollinearity. LASSO's key advantages are it's built in variable selection and improved predictive performance via regularization and it's main drawback is potential bias in the non-zero coefficients due to shrinkage.
 
-### 2. State which error metric you are using (i.e., CV MAE or CV MSE and state the chosen k-value).
+### Error Metric
 
-Answer: I will me using CV MAE and k=10.
+I will me using CV MAE and k=10.
 
-### 3. Identify at least p = 3 predictors X1, X2, ..., Xp for modeling the expected response E(Y) of one of your variables Y.
+### Identify at least p = 3 predictors X1, X2, ..., Xp 
 
-Answer: For the LASSO model, I will predict
+For the LASSO model, I will predict
 
 $Y = gdpgrowth$
 
@@ -442,9 +398,7 @@ $X2 = school$
 
 $X3 = invest$
 
-### 4. Compute 50 LASSO models for 50 different values of 𝜆 (the penalty tuning parameter), each with all p predictors. You can start out by trying 𝜆 in the range of -5 to 1 on the log10 scale. Plot the cross-validated (CV) error for each value of 𝜆.
-
-Answer:
+### Compute 50 LASSO models for 50 different values of 𝜆 (the penalty tuning parameter)
 
 ```{r}
 # STEP 1: LASSO Algorithm & Model Specification 
@@ -482,10 +436,6 @@ lasso_models<-lasso_workflow%>%
 autoplot(lasso_models)+ scale_x_log10() +  xlab(expression(lambda))
 ```
 
-### 5. Based on your plot in the previous step, what value of lambda is best?
-
-Answer: Based on the plot above, the lambda is best when it is equal to 0.25
-
 ```{r}
 # Checking the approximation with the code 
 best_penalty <- lasso_models %>%   
@@ -493,9 +443,9 @@ best_penalty <- lasso_models %>%
 best_penalty
 ```
 
-### 6. Pick the lambda associated with the parsimonious model.
+As λ increases from extremely small (left) to moderate values, the MAE drops sharply indicating that a little shrinkage improves out-of-sample error. At around λ≈0.25, the curve reaches its lowest point.
 
-Answer: 0.34
+### Pick the lambda associated with the parsimonious model.
 
 ```{r}
 # This is copied exactly from the R Code Notes for LASSO Section 
@@ -513,9 +463,7 @@ parsimonious_penalty <- lasso_models %>%
 parsimonious_penalty
 ```
 
-### 7. For your parsimonious model, how many and which predictors were kept?
-
-Answer: For my parsimonious model, 4 variables were kept but rest of the other variables were shrunk exactly to zero. The variables that were kept are: gdp60, popgrowth, invest and inter_yes
+Because 1.3570 ≤ 1.3787, λ = 0.3393’s CV error is within one SE of the best possible, so it wins as the sparsest model that’s statistically indistinguishable from the optimum.
 
 ```{r}
 final_lasso <- lasso_workflow %>%   
@@ -524,3 +472,5 @@ final_lasso <- lasso_workflow %>%
 final_lasso %>%   
   tidy()
 ```
+
+For my parsimonious model, 4 variables were kept but rest of the other variables were shrunk exactly to zero. The variables that were kept are: gdp60, popgrowth, invest and inter_yes.
